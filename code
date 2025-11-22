@@ -1,0 +1,25 @@
+print("AC suggestion system(Manual-By user)\n")
+city= input("Enter your city: ")
+temperature = int(input("Enter the temperature in °C: "))
+humidity = int(input("Enter the humidity in %: "))
+condition= input("Enter the condition like (Rainy, Cloudy, Clear, Mist): ")
+
+print(f"\n  Weather Forecast for {city}:")
+
+print("\nCity: ", city)
+
+print (f"Temperature: {temperature}°C")
+print (f"Humidity: {humidity}%")
+print (f"Condition: {condition}\n\n")
+print ("Verdict: ")
+if condition == "rainy" or condition == "cloudy" and temperature >= 30:
+    print("Due to rainy or cloudy conditions, AC is not required.")
+
+elif (temperature >= 30):
+    print("It's very hot today, AC is must.")
+elif (temperature >=26):
+    print("It's moderately hot today, AC is recommended.")
+elif(temperature>=18):
+    print("It's cool today, AC is not necessary.")
+else:
+    print("It's very cold today. AC is not required.")
